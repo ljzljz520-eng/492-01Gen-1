@@ -1,0 +1,272 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "猫房-01",
+      "type": "cat",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准猫房 1号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 2,
+      "name": "猫房-02",
+      "type": "cat",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准猫房 2号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 3,
+      "name": "猫房-03",
+      "type": "cat",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准猫房 3号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 4,
+      "name": "猫房-04",
+      "type": "cat",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准猫房 4号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 5,
+      "name": "猫房-05",
+      "type": "cat",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准猫房 5号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 6,
+      "name": "猫房-06",
+      "type": "cat",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准猫房 6号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 7,
+      "name": "犬舍-01",
+      "type": "dog",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准犬舍 1号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 8,
+      "name": "犬舍-02",
+      "type": "dog",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准犬舍 2号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 9,
+      "name": "犬舍-03",
+      "type": "dog",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准犬舍 3号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 10,
+      "name": "犬舍-04",
+      "type": "dog",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准犬舍 4号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 11,
+      "name": "犬舍-05",
+      "type": "dog",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准犬舍 5号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 12,
+      "name": "犬舍-06",
+      "type": "dog",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准犬舍 6号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 13,
+      "name": "犬舍-07",
+      "type": "dog",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准犬舍 7号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 14,
+      "name": "犬舍-08",
+      "type": "dog",
+      "capacity": 1,
+      "status": "available",
+      "description": "标准犬舍 8号",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 15,
+      "name": "猫房-VIP",
+      "type": "cat",
+      "capacity": 2,
+      "status": "available",
+      "description": "豪华VIP猫房，可容纳2只猫",
+      "created_at": "2026-06-12 22:17:27"
+    },
+    {
+      "id": 16,
+      "name": "犬舍-VIP",
+      "type": "dog",
+      "capacity": 2,
+      "status": "available",
+      "description": "豪华VIP犬舍，可容纳大型犬",
+      "created_at": "2026-06-12 22:17:27"
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "name": "小白",
+      "species": "cat",
+      "breed": "英短",
+      "age": 2,
+      "owner_name": "张三",
+      "owner_phone": "13800138000",
+      "vaccine_expiry_date": "2027-01-01",
+      "vaccine_valid": 1,
+      "created_at": "2026-06-12 22:30:43"
+    },
+    {
+      "id": 2,
+      "name": "小黑",
+      "species": "cat",
+      "breed": "美短",
+      "age": 1,
+      "owner_name": "李四",
+      "owner_phone": "13900139000",
+      "vaccine_expiry_date": "2027-06-01",
+      "vaccine_valid": 1,
+      "created_at": "2026-06-12 22:30:55"
+    },
+    {
+      "id": 3,
+      "name": "豆豆",
+      "species": "dog",
+      "breed": "金毛",
+      "age": 3,
+      "owner_name": "王五",
+      "owner_phone": "13700137000",
+      "vaccine_expiry_date": "2026-01-01",
+      "vaccine_valid": 0,
+      "created_at": "2026-06-12 22:32:15"
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "booking_no": "BK20260612223050974",
+      "pet_id": 1,
+      "room_id": 1,
+      "check_in_date": "2026-06-12",
+      "check_out_date": "2026-06-15",
+      "actual_check_out": null,
+      "status": "active",
+      "medication": "每天早晚各一次感冒药",
+      "grooming": 1,
+      "pickup_service": 1,
+      "pickup_time": "",
+      "dropoff_time": "",
+      "total_price": 470,
+      "notes": "性格温顺，喜欢玩逗猫棒",
+      "created_at": "2026-06-12 22:30:50"
+    },
+    {
+      "id": 2,
+      "booking_no": "BK20260612223220784",
+      "pet_id": 3,
+      "room_id": 9,
+      "check_in_date": "2026-06-12",
+      "check_out_date": "2026-06-14",
+      "actual_check_out": null,
+      "status": "active",
+      "medication": "",
+      "grooming": 0,
+      "pickup_service": 0,
+      "pickup_time": "",
+      "dropoff_time": "",
+      "total_price": 240,
+      "notes": "",
+      "created_at": "2026-06-12 22:32:20"
+    }
+  ],
+  "daily_records": [
+    {
+      "id": 1,
+      "booking_id": 1,
+      "record_date": "2026-06-12",
+      "feeding": "早餐：猫粮50g，全部吃完；晚餐：猫粮50g，剩少量",
+      "walking": "室内活动30分钟，精神良好",
+      "abnormal": "无异常",
+      "staff_name": "",
+      "return_confirmed": 0,
+      "created_at": "2026-06-12 22:33:16"
+    }
+  ],
+  "reminders": [
+    {
+      "id": 1,
+      "booking_id": 2,
+      "pet_id": 3,
+      "type": "vaccine_expired",
+      "title": "💉 豆豆 疫苗已过期",
+      "message": "豆豆（犬舍-03）的疫苗已于 2026-01-01 过期，请提醒主人 王五（13700137000）尽快补打。",
+      "is_read": 0,
+      "reminder_date": "2026-06-12",
+      "created_at": "2026-06-12 22:32:20"
+    },
+    {
+      "id": 2,
+      "booking_id": 2,
+      "pet_id": 3,
+      "type": "checkout_today",
+      "title": "📅 豆豆 今日需要接回",
+      "message": "豆豆（犬舍-03）今日是预定接回日期，请提前准备好物品并联系主人 王五（13700137000）。",
+      "is_read": 0,
+      "reminder_date": "2026-06-13",
+      "created_at": "2026-06-13 16:55:39"
+    },
+    {
+      "id": 3,
+      "booking_id": 2,
+      "pet_id": 3,
+      "type": "vaccine_expired",
+      "title": "💉 豆豆 疫苗已过期",
+      "message": "豆豆（犬舍-03）的疫苗已于 2026-01-01 过期，请提醒主人 王五（13700137000）尽快补打。",
+      "is_read": 0,
+      "reminder_date": "2026-06-13",
+      "created_at": "2026-06-13 16:55:39"
+    }
+  ]
+}
