@@ -21,6 +21,7 @@ function NewBooking() {
   const [rooms, setRooms] = useState([]);
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
+  const [selectedRoomId, setSelectedRoomId] = useState(null);
   const [estimatedPrice, setEstimatedPrice] = useState(0);
   const [isNewPet, setIsNewPet] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -62,6 +63,7 @@ function NewBooking() {
 
   const handlePetChange = (value) => {
     setSelectedPetId(value);
+    setSelectedRoomId(null);
     if (value === 'new') {
       setIsNewPet(true);
       setSpecies(null);
@@ -75,6 +77,7 @@ function NewBooking() {
 
   const handleNewPetSpecies = (e) => {
     setSpecies(e.target.value);
+    setSelectedRoomId(null);
     form.setFieldsValue({ room_id: undefined });
   };
 
@@ -133,8 +136,7 @@ function NewBooking() {
       return !!selectedPetId;
     }
     if (step === 1) {
-      const dates = form.getFieldValue('dates');
-      return dates && dates.length === 2 && !!form.getFieldValue('room_id');
+      return !!(checkInDate && checkOutDate && selectedRoomId);
     }
     return true;
   };
@@ -336,7 +338,10 @@ function NewBooking() {
                   name="room_id"
                   rules={[{ required: true, message: '请选择房间' }]}
                 >
-                  <Radio.Group style={{ width: '100%' }}>
+                  <Radio.Group
+                    style={{ width: '100%' }}
+                    onChange={(e) => setSelectedRoomId(e.target.value)}
+                  >
                     <Row gutter={[12, 12]}>
                       {rooms.map(room => (
                         <Col xs={24} sm={12} md={8} key={room.id}>

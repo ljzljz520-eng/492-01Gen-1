@@ -34,6 +34,26 @@ function getActiveBookings(db, roomId, excludeBookingId = null) {
   );
 }
 
+function checkPetAvailability(db, petId, checkInDate, checkOutDate, excludeBookingId = null) {
+  const petActiveBookings = db.bookings.filter(b =>
+    b.pet_id === petId &&
+    ['active', 'overdue'].includes(b.status) &&
+    (excludeBookingId === null || b.id !== excludeBookingId)
+  );
+
+  for (const b of petActiveBookings) {
+    const actualCheckOut = b.actual_check_out ? b.actual_check_out : b.check_out_date;
+    if (dayjs(b.check_in_date).isBefore(dayjs(checkOutDate)) &&
+        dayjs(actualCheckOut).isAfter(dayjs(checkInDate))) {
+      return {
+        available: false,
+        message: `该宠物在 ${dayjs(b.check_in_date).format('MM-DD')} 至 ${dayjs(actualCheckOut).format('MM-DD')} 期间已有寄养预约`
+      };
+    }
+  }
+  return { available: true, message: '可预订' };
+}
+
 function checkRoomAvailability(db, roomId, checkInDate, checkOutDate, excludeBookingId = null) {
   const room = db.rooms.find(r => r.id === roomId);
   if (!room) return { available: false, message: '房间不存在' };
@@ -353,6 +373,11 @@ app.post('/api/bookings', (req, res) => {
   const pet = db.pets.find(p => p.id === (typeof finalPetId === 'string' ? Number(finalPetId) : finalPetId));
   if (!pet) {
     return res.status(400).json({ error: '宠物不存在' });
+  }
+
+  const petAvailability = checkPetAvailability(db, pet.id, check_in_date, check_out_date);
+  if (!petAvailability.available) {
+    return res.status(400).json({ error: petAvailability.message });
   }
 
   const room = db.rooms.find(r => r.id === Number(room_id));

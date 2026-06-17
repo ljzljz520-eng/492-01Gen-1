@@ -192,7 +192,7 @@
       "check_in_date": "2026-06-12",
       "check_out_date": "2026-06-15",
       "actual_check_out": null,
-      "status": "active",
+      "status": "overdue",
       "medication": "每天早晚各一次感冒药",
       "grooming": 1,
       "pickup_service": 1,
@@ -210,7 +210,7 @@
       "check_in_date": "2026-06-12",
       "check_out_date": "2026-06-14",
       "actual_check_out": null,
-      "status": "active",
+      "status": "overdue",
       "medication": "",
       "grooming": 0,
       "pickup_service": 0,
@@ -219,6 +219,24 @@
       "total_price": 240,
       "notes": "",
       "created_at": "2026-06-12 22:32:20"
+    },
+    {
+      "id": 3,
+      "booking_no": "BK20260617101637365",
+      "pet_id": 1,
+      "room_id": 2,
+      "check_in_date": "2026-06-16",
+      "check_out_date": "2026-06-18",
+      "actual_check_out": null,
+      "status": "active",
+      "medication": "",
+      "grooming": 0,
+      "pickup_service": 0,
+      "pickup_time": "",
+      "dropoff_time": "",
+      "total_price": 160,
+      "notes": "",
+      "created_at": "2026-06-17 10:16:37"
     }
   ],
   "daily_records": [
@@ -267,6 +285,50 @@
       "is_read": 0,
       "reminder_date": "2026-06-13",
       "created_at": "2026-06-13 16:55:39"
+    },
+    {
+      "id": 4,
+      "booking_id": 1,
+      "pet_id": 1,
+      "type": "overdue",
+      "title": "⚠️ 小白 寄养已超期",
+      "message": "小白（猫房-01）已超过预定接回时间 2 天，请联系主人 张三（13800138000）确认续住或接回。",
+      "is_read": 0,
+      "reminder_date": "2026-06-17",
+      "created_at": "2026-06-17 10:15:53"
+    },
+    {
+      "id": 5,
+      "booking_id": 2,
+      "pet_id": 3,
+      "type": "overdue",
+      "title": "⚠️ 豆豆 寄养已超期",
+      "message": "豆豆（犬舍-03）已超过预定接回时间 3 天，请联系主人 王五（13700137000）确认续住或接回。",
+      "is_read": 0,
+      "reminder_date": "2026-06-17",
+      "created_at": "2026-06-17 10:15:53"
+    },
+    {
+      "id": 6,
+      "booking_id": 2,
+      "pet_id": 3,
+      "type": "vaccine_expired",
+      "title": "💉 豆豆 疫苗已过期",
+      "message": "豆豆（犬舍-03）的疫苗已于 2026-01-01 过期，请提醒主人 王五（13700137000）尽快补打。",
+      "is_read": 0,
+      "reminder_date": "2026-06-17",
+      "created_at": "2026-06-17 10:15:53"
+    },
+    {
+      "id": 7,
+      "booking_id": 3,
+      "pet_id": 1,
+      "type": "checkout_today",
+      "title": "📅 小白 今日需要接回",
+      "message": "小白（猫房-02）今日是预定接回日期，请提前准备好物品并联系主人 张三（13800138000）。",
+      "is_read": 0,
+      "reminder_date": "2026-06-17",
+      "created_at": "2026-06-17 10:16:37"
     }
   ]
 }
